@@ -2,6 +2,8 @@ package com.interviewPrep.TDDPrepmotojdbc.dao;
 
 import com.interviewPrep.TDDPrepmotojdbc.dto.Motorcycle;
 
+import java.util.List;
+
 public interface MotrocycleDao {
     /**
      * Getting one motorcycle for the given id
@@ -10,6 +12,10 @@ public interface MotrocycleDao {
      */
     Motorcycle getMotorcycloe(int id);
 
-    List<Motorcycle> getAllMotorcycles()
+    /**
+     * Get all the motorcycles
+     * @return
+     */
+    List<Motorcycle> getAllMotorcycles();
 
 }
