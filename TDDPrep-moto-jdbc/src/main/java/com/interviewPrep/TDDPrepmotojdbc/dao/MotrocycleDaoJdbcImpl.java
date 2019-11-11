@@ -1,9 +1,10 @@
 package com.interviewPrep.TDDPrepmotojdbc.dao;
 
 import com.interviewPrep.TDDPrepmotojdbc.dto.Motorcycle;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
     /**
      * Getting one motorcycle for the given id from the database
