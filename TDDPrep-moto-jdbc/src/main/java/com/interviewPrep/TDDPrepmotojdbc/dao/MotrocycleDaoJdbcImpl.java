@@ -9,6 +9,14 @@ import java.util.List;
 
 @Repository
 public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
+
+    // Prepared statement strings
+
+    private static final String INSERT_MOTO_SQL = "INSERT INTO MOTORCYCLE (VIN, MAKE, MODEL, YEAR, COLOR) VALUES (?,?,?,?,?)";
+
+    private static final String SELECT_MOTO_SQL = "Select * from motorcycle where id = ?";
+
+
     /**
      * Getting one motorcycle for the given id from the database
      *
