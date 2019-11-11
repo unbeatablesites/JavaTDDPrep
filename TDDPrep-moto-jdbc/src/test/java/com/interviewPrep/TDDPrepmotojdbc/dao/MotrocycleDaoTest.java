@@ -60,4 +60,31 @@ public class MotrocycleDaoTest {
         assertNull(compareMotoObject);
 
     }
+
+    @Test
+    public void getAllMotorcycle(){
+        Motorcycle moto = new Motorcycle();
+        moto.setVin("12345");
+        moto.setMake("Honda");
+        moto.setModel("Africa Twin");
+        moto.setYear("2019");
+        moto.setColor("Black");
+
+        moto = dao.addMotorcycle(moto);
+
+        moto = new Motorcycle();
+        moto.setVin("22345");
+        moto.setMake("2Honda");
+        moto.setModel("2Africa Twin");
+        moto.setYear("22019");
+        moto.setColor("2Black");
+
+        moto = dao.addMotorcycle(moto);
+
+// Adding two motorcycles
+
+
+
+
+    }
 }
