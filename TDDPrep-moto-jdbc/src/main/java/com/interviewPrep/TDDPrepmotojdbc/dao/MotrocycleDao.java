@@ -10,4 +10,6 @@ public interface MotrocycleDao {
      */
     Motorcycle getMotorcycloe(int id);
 
+    List<Motorcycle> getAllMotorcycles()
+
 }
