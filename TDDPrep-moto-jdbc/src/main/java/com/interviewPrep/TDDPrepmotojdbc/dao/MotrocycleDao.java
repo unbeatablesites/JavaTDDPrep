@@ -22,7 +22,7 @@ public interface MotrocycleDao {
      * Add a motorcycle
      * @return
      */
-    Motorcycle addmotorcycle();
+    Motorcycle addMotorcycle(Motorcycle motorcycle);
 
 
 
