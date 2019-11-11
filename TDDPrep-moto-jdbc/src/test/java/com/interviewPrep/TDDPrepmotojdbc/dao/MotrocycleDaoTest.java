@@ -42,5 +42,11 @@ public class MotrocycleDaoTest {
 
         assertEquals(moto, compareMotoObject);
 
+        dao.deleteMotorcycle(moto.getId());
+
+        compareMotoObject = dao.getMotorcycle(moto.getId());
+
+        assertNull(compareMotoObject);
+
     }
 }
