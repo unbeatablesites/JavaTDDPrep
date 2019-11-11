@@ -31,4 +31,11 @@ public interface MotrocycleDao {
      */
     void updateMotorcycle(Motorcycle motorcycle);
 
+    /**
+     *
+     * Deletes the Motorcycle matching the given id
+     * @param id
+     */
+    void deleteMotorcycle(int id);
+
 }
