@@ -2,8 +2,11 @@ package com.interviewPrep.TDDPrepmotojdbc.dao;
 
 import com.interviewPrep.TDDPrepmotojdbc.dto.Motorcycle;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
+
 @Repository
 public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
     /**
@@ -13,6 +16,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @return Motorcycle
      */
     @Override
+    @Transactional
     public Motorcycle getMotorcycle(int id) {
         return null;
     }
@@ -23,6 +27,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @return
      */
     @Override
+    @Transactional
     public List<Motorcycle> getAllMotorcycles() {
         return null;
     }
@@ -34,6 +39,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @return
      */
     @Override
+    @Transactional
     public Motorcycle addMotorcycle(Motorcycle motorcycle) {
         return null;
     }
@@ -45,6 +51,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @param motorcycle
      */
     @Override
+    @Transactional
     public void updateMotorcycle(Motorcycle motorcycle) {
 
     }
@@ -55,6 +62,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @param id
      */
     @Override
+    @Transactional
     public void deleteMotorcycle(int id) {
 
     }
@@ -66,6 +74,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
      * @return
      */
     @Override
+    @Transactional
     public List<Motorcycle> getMotorcyleByMake(String make) {
         return null;
     }
