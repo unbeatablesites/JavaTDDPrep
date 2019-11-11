@@ -127,4 +127,33 @@ public class MotrocycleDaoTest {
 
     }
 
+    @Test
+    public void updateMotorcycle(){
+
+        Motorcycle moto = new Motorcycle();
+        moto.setVin("12345");
+        moto.setMake("Honda_Civic");
+        moto.setModel("Africa Twin");
+        moto.setYear("2019");
+        moto.setColor("Black");
+
+        moto = dao.addMotorcycle(moto);
+
+        moto.setVin("99999");
+        moto.setMake("Updated");
+        moto.setModel("Updated");
+        moto.setYear("1111");
+        moto.setColor("Updated");
+
+        dao.updateMotorcycle(moto);
+
+        Motorcycle comparingMoto = dao.getMotorcycle(moto.getId());
+
+        assertEquals(moto,comparingMoto);
+
+
+
+
+    }
+
 }
