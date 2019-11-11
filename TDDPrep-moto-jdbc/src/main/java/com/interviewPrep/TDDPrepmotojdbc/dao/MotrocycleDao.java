@@ -10,7 +10,7 @@ public interface MotrocycleDao {
      * @param id
      * @return Motorcycle
      */
-    Motorcycle getMotorcycloe(int id);
+    Motorcycle getMotorcycle(int id);
 
     /**
      * Get all the motorcycles in the database
