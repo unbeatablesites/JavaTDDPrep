@@ -1,4 +1,4 @@
-package com.interviewPrep.TDDPrepmotojdbc;
+package com.interviewPrep.TDDPrepmotojdbc.dto;
 
 import java.util.Objects;
 
