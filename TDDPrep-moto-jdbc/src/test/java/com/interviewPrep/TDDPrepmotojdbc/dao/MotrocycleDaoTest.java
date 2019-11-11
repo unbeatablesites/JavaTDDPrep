@@ -81,7 +81,7 @@ public class MotrocycleDaoTest {
 
         moto = dao.addMotorcycle(moto);
 
-// Adding two motorcycles
+// Adding two motorcycles that will go into the list that will be testeding the getAll method.
 
 
 
