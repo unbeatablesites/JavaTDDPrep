@@ -26,10 +26,21 @@ public class MotrocycleDaoTest {
 
         motorcycleList.stream().forEach(motorcycle -> dao.deleteMotorcycle(motorcycle.getId()));
 
-
         }
 
     @Test
-    public void getMotorcycle() {
+    public void addGetDeleteMotorcycle() {
+        Motorcycle moto = new Motorcycle();
+        moto.setVin("12345");
+        moto.setMake("Honda");
+        moto.setModel("Africa Twin");
+        moto.setYear("2019");
+        moto.setColor("Black");
+
+        moto = dao.addMotorcycle(moto);
+        Motorcycle compareMotoObject = dao.getMotorcycle(moto.getId());
+
+        assertEquals(moto, compareMotoObject);
+
     }
 }
