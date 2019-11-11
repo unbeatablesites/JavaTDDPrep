@@ -18,4 +18,12 @@ public interface MotrocycleDao {
      */
     List<Motorcycle> getAllMotorcycles();
 
+    /**
+     * Add a motorcycle
+     * @return
+     */
+    Motorcycle addmotorcycle();
+
+
+
 }
