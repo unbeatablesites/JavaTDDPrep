@@ -63,6 +63,9 @@ public class MotrocycleDaoTest {
 
     @Test
     public void getAllMotorcycle(){
+
+// Adding two motorcycles that will go into the list that will be testeding the getAll method.
+
         Motorcycle moto = new Motorcycle();
         moto.setVin("12345");
         moto.setMake("Honda");
@@ -82,6 +85,11 @@ public class MotrocycleDaoTest {
         moto = dao.addMotorcycle(moto);
 
 // Adding two motorcycles that will go into the list that will be testeding the getAll method.
+        List<Motorcycle> motorcycleList = dao.getAllMotorcycles();
+
+//  Checking to see if the two motorcycles went into the database
+        assertEquals(2,motorcycleList.size());
+
 
 
 
