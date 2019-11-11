@@ -38,4 +38,10 @@ public interface MotrocycleDao {
      */
     void deleteMotorcycle(int id);
 
+    /**
+     * Get all Motorcycles with the given make
+     * @param make
+     * @return
+     */
+    List<Motorcycle> getMotorcyleByMake(String make);
 }
