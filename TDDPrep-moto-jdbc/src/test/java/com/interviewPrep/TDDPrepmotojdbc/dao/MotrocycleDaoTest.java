@@ -84,15 +84,47 @@ public class MotrocycleDaoTest {
 
         moto = dao.addMotorcycle(moto);
 
-// Adding two motorcycles that will go into the list that will be testeding the getAll method.
+// Adding two motorcycles that will go into the list that will be testing the getAll method.
         List<Motorcycle> motorcycleList = dao.getAllMotorcycles();
 
 //  Checking to see if the two motorcycles went into the database
         assertEquals(2,motorcycleList.size());
+    }
 
+    @Test
+    public void getAllMotorcyclesByMake(){
 
+        Motorcycle moto = new Motorcycle();
+        moto.setVin("12345");
+        moto.setMake("Honda_Civic");
+        moto.setModel("Africa Twin");
+        moto.setYear("2019");
+        moto.setColor("Black");
 
+        dao.addMotorcycle(moto);
 
+        moto = new Motorcycle();
+        moto.setVin("22345");
+        moto.setMake("Honda");
+        moto.setModel("2Africa Twin");
+        moto.setYear("22019");
+        moto.setColor("2Black");
+
+        dao.addMotorcycle(moto);
+
+        moto = new Motorcycle();
+        moto.setVin("32345");
+        moto.setMake("Honda");
+        moto.setModel("2Africa Twin");
+        moto.setYear("22019");
+        moto.setColor("2Black");
+
+        dao.addMotorcycle(moto);
+
+        List<Motorcycle> motorcycleList = dao.getMotorcyleByMake("Honda");
+
+        assertEquals(2,motorcycleList.size());
 
     }
+
 }
