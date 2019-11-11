@@ -9,6 +9,8 @@ public class MotrocycleDaoTest {
 
     @Before
     public void setUp() throws Exception {
+
+        System.out.println("Running Setup...");
     }
 
     @Test
