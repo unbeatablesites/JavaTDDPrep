@@ -4,6 +4,7 @@ import com.interviewPrep.TDDPrepmotojdbc.dto.Motorcycle;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
