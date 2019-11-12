@@ -4,6 +4,7 @@ import com.interviewPrep.TDDPrepmotojdbc.dto.Motorcycle;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -86,4 +87,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
     public List<Motorcycle> getMotorcyleByMake(String make) {
         return null;
     }
+
+
+    private Motorcycle mapRowToMotorcycle(ResultSet rs, int rowNum) throws SQLException{}
 }
