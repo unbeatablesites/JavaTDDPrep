@@ -12,12 +12,26 @@ import java.util.List;
 @Repository
 public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
 
-    // Prepared statement strings
+    private static final String INSERT_MOTO_SQL =
+            "insert into car (make, model, year, color) values (?, ?, ?, ?)";
 
-    private static final String INSERT_MOTO_SQL = "INSERT INTO MOTORCYCLE (VIN, MAKE, MODEL, YEAR, COLOR) VALUES (?,?,?,?,?)";
+    private static final String SELECT_MOTO_SQL =
+            "select * from car where id = ?";
 
-    private static final String SELECT_MOTO_SQL = "Select * from motorcycle where id = ?";
+    private static final String SELECT_ALL_MOTO_SQL =
+            "select * from car";
 
+    private static final String DELETE_MOTO_SQL =
+            "delete from car where id = ?";
+
+    private static final String UPDATE_MOTO_SQL =
+            "update car set make = ?, model = ?, year = ?, color = ? where id = ?";
+
+    private static final String SELECT_MOTO_BY_MAKE_SQL =
+            "select * from car where make = ?";
+
+    private static final String SELECT_MOTO_BY_COLOR_SQL =
+            "select * from car where color = ?";
 
     /**
      * Getting one motorcycle for the given id from the database
