@@ -90,7 +90,7 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
     }
 
     /**
-     * Maps DB row to Motorcycle object
+     * Maps table row to Motorcycle object
      * @param rs
      * @param rowNum
      * @return
