@@ -90,5 +90,15 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
     }
 
 
-    private Motorcycle mapRowToMotorcycle(ResultSet rs, int rowNum) throws SQLException{}
+    private Motorcycle mapRowToMotorcycle(ResultSet rs, int rowNum) throws SQLException{
+        Motorcycle moto = new Motorcycle();
+        moto.setId(rs.getInt("id"));
+        moto.setVin(rs.getString("vin"));
+        moto.setMake(rs.getString("make"));
+        moto.setModel(rs.getString("model"));
+        moto.setYear(rs.getString("year"));
+        moto.setColor(rs.getString("color"));
+
+        return moto;
+    }
 }
