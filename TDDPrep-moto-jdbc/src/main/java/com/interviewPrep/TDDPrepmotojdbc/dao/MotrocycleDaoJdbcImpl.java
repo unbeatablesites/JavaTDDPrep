@@ -89,7 +89,13 @@ public class MotrocycleDaoJdbcImpl implements MotrocycleDao {
         return null;
     }
 
-
+    /**
+     * Maps DB row to Motorcycle object
+     * @param rs
+     * @param rowNum
+     * @return
+     * @throws SQLException
+     */
     private Motorcycle mapRowToMotorcycle(ResultSet rs, int rowNum) throws SQLException{
         Motorcycle moto = new Motorcycle();
         moto.setId(rs.getInt("id"));
